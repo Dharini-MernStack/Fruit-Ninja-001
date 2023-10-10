@@ -16,13 +16,13 @@ function preload(){
   fruit4 = loadImage("fruit4.png");
   gameOverImage = loadImage("gameover.png")
 
-  //load sound here
+ 
 }
 
 
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth,windowHeight);
   
   //creating sword
    knife=createSprite(40,200,20,20);
@@ -62,7 +62,7 @@ function draw() {
       if(monsterGroup.isTouching(knife)){
         gameState=END;
         
-        //add gameover sound here
+
         
         fruitGroup.destroyEach();
         monsterGroup.destroyEach();
@@ -90,7 +90,7 @@ function Monster(){
     monster=createSprite(400,200,20,20);
     monster.addAnimation("moving", monsterImage);
     monster.y=Math.round(random(100,550));
-    //update below give line of code for increase monsterGroup speed by 10
+    // increase monsterGroup speed by 8
     monster.velocityX = -8;
     monster.setLifetime=50;
     
@@ -103,12 +103,12 @@ function fruits(){
     position = Math.round(random(1,2));
     fruit=createSprite(400,200,20,20);
     
-     //using random variable change the position of fruit, to make it more challenging
+     // change the position of fruit, to make it more challenging
     
     if(position==1)
     {
     fruit.x=600;
-    //update below give line of code for increase fruitGroup speed by 4
+    // increase fruitGroup speed by 7
     fruit.velocityX=-7
     }
     else
@@ -116,7 +116,7 @@ function fruits(){
       if(position==2){
       fruit.x=0;
       
-     //update below give line of code for increase fruitGroup speed by 4
+     //increase fruitGroup speed by 7
       fruit.velocityX= 7;
       }
     }
