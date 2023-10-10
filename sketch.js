@@ -55,6 +55,7 @@ function draw() {
     // Increase score if sword touching fruit
     if(fruitGroup.isTouching(knife)){
       fruitGroup.destroyEach();
+      score = score + 2;
     }
     else
     {
