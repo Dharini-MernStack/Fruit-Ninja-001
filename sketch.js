@@ -73,7 +73,7 @@ function draw() {
         // Change the animation of sword to gameover and reset its position
         knife.addImage(gameOverImage);
         knife.scale=2;
-        knife.x=300;
+        knife.x=600;
         knife.y=300;
       }
     }
